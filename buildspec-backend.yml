@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      php: 8.0
+    commands:
+      - composer install
+  build:
+    commands:
+      - php artisan migrate
+artifacts:
+  files:
+    - "**/*"
+  base-directory: .
