@@ -11,5 +11,7 @@ phases:
       - php artisan migrate
 artifacts:
   files:
-    - "**/*"
+    - appspec.yml
+    - scripts/**/*
+    - '**/*' # Include all other application files
   base-directory: .
